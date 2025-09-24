@@ -1,1 +1,1 @@
-Readme file for script on permissions
+Readme for permissions
