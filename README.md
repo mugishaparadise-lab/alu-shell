@@ -1,1 +1,1 @@
-Script that print the current working directory
+We are here for redirections and filters
