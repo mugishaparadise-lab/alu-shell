@@ -1,1 +1,1 @@
-README fir variables and expansions
+Readme file on variables and expansions
