@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This uses SIGTERM signal sent through /proc interface
+PID=$(pgrep -f 4-to_infinity_and_beyond)
+[ -n "$PID" ] && echo "Stopping PID $PID" && echo 15 > /proc/"$PID"/oom_score_adj && kill "$PID"
