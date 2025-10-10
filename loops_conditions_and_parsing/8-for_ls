@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-
-for file in *; do
     # Skip if it's a directory (optional — only if you want files only)
     # [ -d "$file" ] && continue
 
     # Use parameter expansion to strip up to the first dash
     # If no dash, entire filename will be shown
+for file in *; do
     echo "${file#*-}"
 done
