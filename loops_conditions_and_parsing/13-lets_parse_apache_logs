@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# it is to display the visitor IP along with https code from apache 
+awk '{ print $1, $9 }' apache-access.log
+
