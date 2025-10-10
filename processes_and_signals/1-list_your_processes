@@ -1,3 +1,16 @@
 #!/usr/bin/env bash
-#  listing the processes
-ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,command --forest
+# Listing the processes
+# Print header
+printf "%-8s %-10s %s\n" "USER" "STARTED" "COMMAND"
+
+# Get the list of processes
+ps -eo user,lstart,cmd --sort=start_time | awk 'NR>1 {
+    user=$1
+    started=sprintf("%s %s", $3, $4)
+    time=sprintf("%s", $5)
+    command=""
+    for(i=8;i<=NF;++i) {
+        command = command $i " "
+    }
+    printf "%-8s %-10s %s\n", user, time, command 
+}'
