@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-    # Skip if it's a directory (optional — only if you want files only)
-    # [ -d "$file" ] && continue
-
-    # Use parameter expansion to strip up to the first dash
-    # If no dash, entire filename will be shown
-for file in *; do
+# we are displaying the files  
+for file in *; 
+do
     echo "${file#*-}"
 done
