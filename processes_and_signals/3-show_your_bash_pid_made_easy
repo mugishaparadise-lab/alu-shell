@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Making display of PID easy
+for pid in $(ls /proc | grep -E '^[0-9]+$'); do
+  if [ -f "/proc/$pid/comm" ] && grep -q bash "/proc/$pid/comm"; then
+    echo "$pid bash"
+  fi
+done
