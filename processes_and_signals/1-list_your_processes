@@ -4,4 +4,4 @@
 printf "%-8s %-10s %s\n" "USER" "STARTED" "COMMAND"
 # Script that displays a list of currently running processes
 
-ps auxf
+ps aux --forest
