@@ -2,15 +2,6 @@
 # Listing the processes
 # Print header
 printf "%-8s %-10s %s\n" "USER" "STARTED" "COMMAND"
+# Script that displays a list of currently running processes
 
-# Get the list of processes
-ps -eo user,lstart,cmd --sort=start_time | awk 'NR>1 {
-    user=$1
-    started=sprintf("%s %s", $3, $4)
-    time=sprintf("%s", $5)
-    command=""
-    for(i=8;i<=NF;++i) {
-        command = command $i " "
-    }
-    printf "%-8s %-10s %s\n", user, time, command 
-}'
+ps auxf
